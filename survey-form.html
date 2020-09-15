@@ -1,11 +1,200 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
         <style>
+            body {
+                background-image: url("background-pattern.png");
+                background-color: black;
+
+                font-family: 'PT Sans', sans-serif;
+                font-size: 18px;
+            }
+
+            main {
+                color: white;
+                padding: 24px;
+                width: 60%;
+                margin: auto;
+            }
+
+            #title {
+                color: #282828;
+                text-align: center;
+                font-size: 48px;
+                margin-bottom: 8px;
+            }
+
+            #description {
+                color: #282828;
+                text-align: center;
+                font-size: 18px;
+                margin-bottom: 34px;
+            }
+
+            #survey-form {
+                background-color: rgba(40, 40, 40, 0.9);
+                border-radius: 10px;
+                padding: 16px;
+            }
+
+            .input-group {
+                width: 90%;
+                margin: auto;
+                margin-bottom: 16px;
+                padding: 8px;
+            }
+
+            input, select, button {
+                width: 95%;
+                font-size: 18px;
+                display: block;
+                margin: auto;
+            }
+
+            input {
+                border-radius: 5px;
+            }
+
+            select {
+                background-color: white;
+                font-family: 'PT Sans', sans-serif;
+                font-size: 18px;
+
+                border-radius: 5px;
+            }
+
+            button {
+                background-color: #3500D3;
+                color: white;
+
+                border-radius: 5px;
+                border: none;
+                height: 48px;
+            }
+
+            textarea {
+                padding: 6px;
+                font-size: 16px;
+                width: 92.5%;
+                margin: 10px auto 0px auto;
+
+                max-width: 100%;
+                display: block;
+
+                border-radius: 5px;
+            }
+
             
+
+            .field-label {
+                display: block;
+                padding-left: 8px;
+                font-size: 22px;
+            }
+
+            .alt-input-group {
+                width: 90%;
+                margin: auto;
+            }
+
+            .alt-input-group label {
+                display: flex;
+                align-items: center;
+                padding-left: 12px;
+                margin-bottom: 8px;
+            }
+
+            .alt-input-group p {
+                margin-bottom: 4px;
+            }
+
+            .alt-input-group input {
+                display: inline-block;
+                width: 24px !important;
+                margin: 3px;
+                margin-left: 6px;
+            }
+
+            input[type=checkbox] {
+                min-width: 20px;
+                min-height: 20px;
+                margin: 0px 0px 0px 3px;
+            }
         </style>
     </head>
     <body>
+    <main>
+        <h1 id="title">Survey Title</h1>
+        <p id="description">This is a description of the survey</p>
+        <form id="survey-form">
+            <div class="input-group">
+                <label for="name" id="name-label" class="field-label">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="input-group">
+                <label for="email" id="email-label" class="field-label">Email</label>
+                <input type="email" id="email" placeholder="Enter your email address">
+            </div>
+            <div class="input-group">
+                <label for="number" id="number-label" class="field-label">Age</label>
+                <input type="number" id="number" placeholder="Enter your age" min="0" max="120">
+            </div>
+            <div class="input-group">
+                <label for="dropdown" id="dropdown-label" class="field-label">Dropdown Label</label>
 
+                <select name="dropdown" id="dropdown">
+                    <option value="dropdown1">Option 1</option>
+                    <option value="dropdown2">Option 2</option>
+                    <option value="dropdown3">Option 3</option>
+                </select>
+            </div>
+            <div class="alt-input-group input-group">
+                <p class="field-label">Radio Group Label</p>
+
+                <label>
+                <input type="radio" id="radio1" name="radio-group" value="radio1">
+                Option 1
+                </label>
+
+                <label>
+                <input type="radio" id="radio2" name="radio-group" value="radio2">
+                Option 2
+                </label>
+
+                <label>
+                <input type="radio" id="radio3" name="radio-group" value="radio3">
+                Option 3
+                </label>
+            </div>
+            <div class="alt-input-group input-group">
+                <p class="field-label">Checkbox Group Label</p>
+
+                <label>
+                    <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1">
+                    Option 1
+                </label>
+
+                <label>
+                    <input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox2">
+                    Option 2
+                </label>
+
+                <label>
+                    <input type="checkbox" id="checkbox3" name="checkbox3" value="checkbox3">
+                    Option 3
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="field-label" for="textarea">Textarea Label</label>
+
+                <textarea id="textarea" name="textarea" rows="4">This is the placeholder 'textarea' text</textarea>
+            </div>
+            <div class="input-group">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
 </html>
